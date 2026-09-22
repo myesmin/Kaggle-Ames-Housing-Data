@@ -1,0 +1,20 @@
+# Runtime dependencies for the container only -- see requirements.txt for the full
+# analysis environment.  The image deliberately excludes jupyter, shap, statsmodels,
+# seaborn and folium: none of them is reachable from `ames.service`, and each one is
+# image size and attack surface for nothing.
+#
+# Versions are pinned to exactly what the model was trained under.  A pickled
+# scikit-learn pipeline is not guaranteed to load across minor versions, so an
+# unpinned serving image is a silent-failure waiting to happen.
+
+numpy==2.1.3
+pandas==2.2.3
+pyarrow==17.0.0
+scipy==1.14.1
+scikit-learn==1.5.2
+lightgbm==4.5.0
+joblib==1.4.2
+matplotlib==3.9.2      # not used for serving; lightgbm imports it on load
+
+fastapi==0.115.6
+uvicorn[standard]==0.34.0

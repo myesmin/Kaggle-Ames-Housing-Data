@@ -1,0 +1,130 @@
+{
+  "model": "LightGBM on log(SalePrice), Duan-smeared to dollars",
+  "training_data": "De Cock (2011) Ames extract, arm's-length sales 2006-2010",
+  "evaluation_regime": "temporal (train 2006-2008, test 2009-July 2010)",
+  "accuracy": {
+    "mdape": 0.054909060716752264,
+    "ppe10": 0.765661252900232,
+    "rmse": 24995.88790569208
+  },
+  "interval": {
+    "method": "Mondrian split-conformal by valuation quintile, recalibrated each quarter on the trailing twelve months of closed sales; multiplicative in log space",
+    "confidence": 0.8,
+    "calibrated_on": {
+      "from": "2009-10-01",
+      "to": "2010-07-01",
+      "sales": 399
+    },
+    "relative_width": 0.24904338215776659,
+    "measured_coverage": 0.7877030162412993,
+    "measured_coverage_basis": "backtest over 862 sales, 2009-2010, each scored with the bands issued before its quarter began",
+    "bands": [
+      {
+        "band": 1,
+        "valuation_from": null,
+        "valuation_to": 121945,
+        "q": 0.14906057663059613,
+        "relative_width": 0.29922637547190367,
+        "backtest_coverage": 0.818182,
+        "calibration_n": 80
+      },
+      {
+        "band": 2,
+        "valuation_from": 121945,
+        "valuation_to": 145082,
+        "q": 0.12872332241657958,
+        "relative_width": 0.2581582027685414,
+        "backtest_coverage": 0.737805,
+        "calibration_n": 80
+      },
+      {
+        "band": 3,
+        "valuation_from": 145082,
+        "valuation_to": 172059,
+        "q": 0.10428070951942203,
+        "relative_width": 0.20893962364212637,
+        "backtest_coverage": 0.79602,
+        "calibration_n": 79
+      },
+      {
+        "band": 4,
+        "valuation_from": 172059,
+        "valuation_to": 216477,
+        "q": 0.12543812660335973,
+        "relative_width": 0.2515346824206327,
+        "backtest_coverage": 0.763514,
+        "calibration_n": 80
+      },
+      {
+        "band": 5,
+        "valuation_from": 216477,
+        "valuation_to": null,
+        "q": 0.11544834715744656,
+        "relative_width": 0.2314099471066945,
+        "backtest_coverage": 0.815029,
+        "calibration_n": 80
+      }
+    ],
+    "previous_calibrated_once": {
+      "method": "Mondrian split-conformal, calibrated once on 2006-2008 sales",
+      "relative_width": 0.21192168285046922,
+      "measured_coverage": 0.7668213457076566,
+      "cheapest_decile_coverage": 0.6262068965517241
+    },
+    "previous_constant_width": {
+      "method": "split-conformal, one half-width for every valuation",
+      "q": 0.10478085415912908,
+      "relative_width": 0.20994538283256803,
+      "measured_coverage": 0.7633410672853829,
+      "cheapest_decile_coverage": 0.5117241379310346
+    },
+    "calibrator": {
+      "alpha": 0.2,
+      "min_group": 30,
+      "edges_log": [
+        11.011504321724725,
+        11.711326424862055,
+        11.885054474975016,
+        12.055593936516662,
+        12.285240962850018,
+        12.988449107476294
+      ],
+      "q_by_band": [
+        0.14906057663059613,
+        0.12872332241657958,
+        0.10428070951942203,
+        0.12543812660335973,
+        0.11544834715744656
+      ],
+      "n_by_band": [
+        80,
+        80,
+        79,
+        80,
+        80
+      ],
+      "q_global": 0.12218850873040665
+    }
+  },
+  "governance": {
+    "neighborhood_bias_spread": 0.10060103793692371,
+    "morans_i": 0.11413510285337759
+  },
+  "monitoring": {
+    "controls_in_limit": true,
+    "quarters_watched": 6
+  },
+  "credit_context": {
+    "base_expected_loss_bps": 88.4849836181509,
+    "stressed_expected_loss_bps": 1183.1361695162884,
+    "cost_of_valuation_uncertainty_bps": 75.49887580306839
+  },
+  "known_weaknesses": [
+    "Trained on one small city, 2006-2010. Values are historical, not current.",
+    "Backtested coverage is 78.8% against the 80% the interval promises: quarterly recalibration closes most of the gap a once-calibrated interval leaves, not all of it.",
+    "The cheapest valuations are still under-covered: the model over-values them by about 2-3%, and no choice of width corrects a biased centre.",
+    "Valuation errors are spatially autocorrelated: Neighborhood has not absorbed location.",
+    "Not a fair-lending assessment. No protected-class attribute exists in this data."
+  ],
+  "not_for": "Lending, underwriting or any real valuation decision. This is a demonstration of a modelling and governance pipeline."
+}

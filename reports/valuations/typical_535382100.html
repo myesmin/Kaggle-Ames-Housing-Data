@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Valuation report &mdash; OldTown, Ames IA</title>
+<style>
+  :root { color-scheme: light dark; --band:#cde2fb; --marker:#2a78d6; }
+  * { box-sizing: border-box; }
+  body { margin:0; padding:32px 20px; background:#fcfcfb; color:#0b0b0b;
+         font:15px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif; }
+  .page { max-width:760px; margin:0 auto; }
+  header { border-bottom:2px solid #0b0b0b; padding-bottom:14px; margin-bottom:26px; }
+  h1 { font-size:21px; margin:0 0 4px; letter-spacing:-.01em; }
+  h2 { font-size:15px; margin:34px 0 10px; text-transform:uppercase;
+        letter-spacing:.07em; color:#52514e; }
+  .muted { color:#8a8880; font-size:13px; }
+  .hero { background:#fff; border:1px solid #e8e7e3; border-radius:10px;
+           padding:22px 24px; margin-bottom:8px; }
+  .value { font-size:42px; font-weight:700; letter-spacing:-.02em; line-height:1.1; }
+  .plain { font-size:15px; margin:14px 0 4px; }
+  table { width:100%; border-collapse:collapse; margin:10px 0 4px; font-size:14px; }
+  th,td { text-align:left; padding:8px 10px; border-bottom:1px solid #e8e7e3; }
+  th { font-size:12px; text-transform:uppercase; letter-spacing:.05em; color:#52514e;
+        border-bottom:1.5px solid #cbcac5; }
+  td.num, th.num { text-align:right; font-variant-numeric:tabular-nums; }
+  td.strong { font-weight:600; }
+  tfoot td { border-top:1.5px solid #cbcac5; border-bottom:none; background:#f7f6f3; }
+  ul.flags { list-style:none; padding:0; margin:8px 0; }
+  ul.flags li { display:flex; gap:12px; align-items:flex-start; padding:11px 0;
+                 border-bottom:1px solid #e8e7e3; }
+  ul.flags p { margin:2px 0 0; color:#52514e; font-size:14px; }
+  .pill { color:#fff; font-size:11px; font-weight:700; text-transform:uppercase;
+           letter-spacing:.05em; padding:3px 9px; border-radius:20px; flex:none;
+           margin-top:2px; min-width:62px; text-align:center; }
+  .facts { display:flex; flex-wrap:wrap; gap:26px; margin-top:12px; font-size:14px; }
+  .facts div span { display:block; color:#8a8880; font-size:12px;
+                     text-transform:uppercase; letter-spacing:.05em; }
+  footer { margin-top:34px; padding-top:16px; border-top:1px solid #e8e7e3;
+            color:#8a8880; font-size:12.5px; }
+  @media (prefers-color-scheme: dark) {
+    :root { --band:#184f95; --marker:#3987e5; }
+    body { background:#1a1a19; color:#fff; }
+    .hero, tfoot td { background:#232322; border-color:#383835; }
+    th, td, ul.flags li, footer { border-color:#383835; }
+    h2, .muted, ul.flags p, footer, .facts div span { color:#c3c2b7; }
+  }
+  @media print { body { padding:0; } .hero { break-inside:avoid; } }
+</style></head><body><div class="page">
+
+<header>
+  <h1>Residential valuation report</h1>
+  <div class="muted">OldTown, Ames, Iowa &nbsp;&middot;&nbsp;
+    Parcel 535382100 &nbsp;&middot;&nbsp; Prepared 21 September 2026</div>
+</header>
+
+<div class="hero">
+  <div class="muted">Estimated market value</div>
+  <div class="value">$161,920</div>
+  <p class="plain"><strong>The model's 80% range for this home is
+     $146,432 to $179,047.</strong> In testing on later sales, ranges built this way contained the sale price 79% of the time.</p>
+  
+<svg viewBox="0 0 600 62" width="100%" height="62" role="img"
+     aria-label="Valuation range from $146,432 to $179,047, estimate $161,920">
+  <rect x="0" y="22" width="600" height="14" rx="7" fill="var(--band)"/>
+  <line x1="284.9" y1="14" x2="284.9" y2="44"
+        stroke="var(--marker)" stroke-width="4" stroke-linecap="round"/>
+  <text x="0" y="58" font-size="12" fill="currentColor" opacity=".72">$146,432</text>
+  <text x="600" y="58" font-size="12" fill="currentColor" opacity=".72"
+        text-anchor="end">$179,047</text>
+  <text x="284.9" y="10" font-size="12" fill="var(--marker)" text-anchor="middle"
+        font-weight="600">$161,920</text>
+</svg>
+  <p class="muted">That range is 20% of the estimate. It is set from how far
+     this model's recent valuations fell from the prices those homes sold for, and is
+     re-fitted every quarter.</p>
+</div>
+
+<div class="facts">
+  <div><span>Living area</span>1,690 sq ft</div>
+  <div><span>Bedrooms</span>4</div>
+  <div><span>Year built</span>1910</div>
+  <div><span>Quality</span>7 of 10</div>
+  <div><span>Lot</span>7,200 sq ft</div>
+</div>
+
+<h2>Comparable sales</h2>
+<p class="muted">Selected the way an appraiser would: nearby first, then similar in size,
+   then ranked by closeness in age and quality. Every property below is a real recorded
+   sale, so the reasoning can be checked rather than taken on trust.</p>
+
+<table>
+  <thead><tr><th>Neighbourhood</th><th class='num'>Size (sq ft)</th>
+  <th class='num'>Built</th><th class='num'>Quality</th><th class='num'>Distance</th>
+  <th class='num'>Sold</th><th class='num'>Sale price</th></tr></thead>
+  <tbody><tr><td>OldTown</td><td class='num'>1,690</td><td class='num'>1916</td><td class='num'>7/10</td><td class='num'>0.46 mi</td><td class='num'>2006</td><td class='num strong'>$144,000</td></tr><tr><td>OldTown</td><td class='num'>1,768</td><td class='num'>1914</td><td class='num'>7/10</td><td class='num'>0.38 mi</td><td class='num'>2006</td><td class='num strong'>$163,000</td></tr><tr><td>OldTown</td><td class='num'>1,641</td><td class='num'>1925</td><td class='num'>7/10</td><td class='num'>0.32 mi</td><td class='num'>2006</td><td class='num strong'>$178,000</td></tr><tr><td>OldTown</td><td class='num'>1,595</td><td class='num'>1915</td><td class='num'>6/10</td><td class='num'>0.19 mi</td><td class='num'>2006</td><td class='num strong'>$155,500</td></tr><tr><td>OldTown</td><td class='num'>1,762</td><td class='num'>1920</td><td class='num'>7/10</td><td class='num'>0.46 mi</td><td class='num'>2006</td><td class='num strong'>$157,000</td></tr></tbody>
+  <tfoot><tr><td><strong>This property</strong></td>
+  <td class='num'>1,690</td>
+  <td class='num'>1910</td>
+  <td class='num'>7/10</td>
+  <td class='num'>&mdash;</td><td class='num'>&mdash;</td>
+  <td class='num'>&mdash;</td></tr></tfoot>
+</table>
+
+
+
+
+<h2>Things to be aware of</h2>
+<ul class="flags"><li><span class='pill' style='background:#008300'>OK</span><div><strong>Valuation range is typical</strong><p>The 80% range spans 20% of the estimate, in line with this model&#x27;s normal precision.</p></div></li></ul>
+
+<footer>
+  <strong>How this was produced.</strong> A gradient-boosted model fitted to 1,550 arm's-length
+  Ames sales from 2006&ndash;2008 and tested on 862 later sales it had not seen. On that test
+  the median valuation error was 5.5%, and 77% of valuations were within 10% of the sale
+  price. The range comes from the model's own recent errors, set separately for five price
+  bands and re-fitted each quarter on the last twelve months of sales.<br><br>
+  <strong>Limitations.</strong> The model has no interior photographs, no renovation permits
+  and no listing history, and it does not inspect the property. Valuations of unusual
+  homes, and of homes at the very top and bottom of the price range, are less reliable;
+  see the notes above. This report is a decision aid, not an appraisal, and is not
+  a substitute for one where a regulation requires it.
+</footer>
+
+</div></body></html>

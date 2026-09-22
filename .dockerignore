@@ -1,0 +1,6 @@
+# The image needs src/ames/ and serving/artifacts/ and nothing else.  Everything
+# below is either rebuildable, irrelevant to serving, or large.
+*
+!src/ames/
+!serving/artifacts/
+!requirements-serving.txt

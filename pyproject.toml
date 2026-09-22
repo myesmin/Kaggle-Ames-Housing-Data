@@ -1,0 +1,17 @@
+[project]
+name = "ames"
+version = "1.0.0"
+description = "Ames Housing -> real-estate valuation & investment risk platform"
+requires-python = ">=3.12"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+addopts = "-q"

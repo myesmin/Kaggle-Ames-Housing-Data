@@ -1,0 +1,18 @@
+# Story County / City of Ames residential property tax inputs.
+# Committed rather than downloaded: neither source publishes a machine-readable series.
+#
+# levy_per_1000  : consolidated tax levy for the AMES/AMES taxing district, dollars per
+#                  $1,000 of taxable value.  Source: Story County Auditor, "LEVIES <AY> -
+#                  Payable <FY>", consolidated rate page.
+#                  https://www.storycountyiowa.gov/643/Tax-Levy-Rates
+# rollback       : Iowa residential assessment limitation ("rollback") for the assessment
+#                  year, certified by the Iowa Department of Revenue.  Source: Iowa
+#                  Legislative Services Agency Fiscal FactBook, "Rollback Percentages".
+#                  https://www.storycountyiowa.gov/644/Rollback-Information
+# effective_rate : levy_per_1000 / 1000 * rollback -- the share of market value paid in tax.
+assessment_year,payable_fiscal_years,levy_per_1000,rollback,effective_rate
+2020,2021-2022,31.15660,0.564094,0.017575
+2021,2022-2023,30.90922,0.541302,0.016731
+2022,2023-2024,30.67295,0.564919,0.017328
+2023,2024-2025,30.63121,0.463428,0.014195
+2024,2025-2026,30.58245,0.474316,0.014505
